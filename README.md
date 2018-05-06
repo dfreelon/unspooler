@@ -39,7 +39,7 @@ for i in unspool(shortlinks):
 print(shorts['urls'])
 ```
 
-If this job is interrupted, the ```shorts``` variable will contain all unshortened data up to the point of interruption. You can then simply re-run ```unspool``` with ```resume_dict=shorts``` and it will quickly skip past all the links it has previously processed and resume at the last unprocessed link. You can even reuse ```shorts``` in the loop (actually you should do this; any new variable you use there will collect only data starting at the last resume point).
+If this job is interrupted, the ```shorts``` variable will contain all unshortened data up to the point of interruption. You can then simply re-run ```unspool``` with ```resume_dict=shorts``` and it will resume at the last unprocessed string. You can even reuse ```shorts``` in the loop (actually you should do this; any new variable you use there will collect only data starting at the last resume point).
 
 **Input**
 
