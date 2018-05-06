@@ -1,7 +1,7 @@
 # unspooler
 **Research-grade URL expansion for Python.**
 
-unspooler is a Python module that expands shortened URLs (e.g. by bit.ly, goo.gl, tiny.cc, etc.) quickly and efficiently. It extracts each URL in a dataset once and only once, decreasing execution time and bandwidth usage. It can also resume partially complete jobs so you don't have to start from scratch if something interrupts execution.
+```unspooler``` is a Python module that expands shortened URLs (e.g. by bit.ly, goo.gl, tiny.cc, etc.) quickly and efficiently. It extracts each URL in a dataset once and only once, decreasing execution time and bandwidth usage. It can also resume partially complete jobs so you don't have to start from scratch if something interrupts execution.
 
 System requirements
 -------------------
@@ -26,7 +26,7 @@ print(shorts['urls'])
 
 Detailed documentation
 ----------------------
-unspooler offers two primary functions: ```unspool_easy``` (easy) and ```unspool``` (advanced). The former is, as its name implies, easier to use, but has the distinct disadvantage of not allowing resumption of interrupted jobs. ```unspool``` is slightly more complex to use but allows resuming. The longer your job, the more I recommend using ```unspool``` over ```unspool_easy```.
+```unspooler``` offers two primary functions: ```unspool_easy``` (easy) and ```unspool``` (advanced). The former is, as its name implies, easier to use, but has the distinct disadvantage of not allowing resumption of interrupted jobs. ```unspool``` is slightly more complex to use but allows resuming. The longer your job, the more I recommend using ```unspool``` over ```unspool_easy```.
 
 Here's how you'd run the above job with ```unspool```:
 
@@ -43,11 +43,11 @@ If this job is interrupted, the ```shorts``` variable will contain all unshorten
 
 **Input**
 
-unspooler accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. unspooler will attempt to extract and unshorten any URLs it finds within these strings via regex; non-URL text is discarded. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
+```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any URLs it finds within these strings via regex; non-URL text is discarded. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
 
 **Output**
 
-unspooler's output is a dict containing four items:
+```unspooler```'s output is a dict containing four items:
 
 * ```urls```: A dict in which the keys are the original URLs and the values are the expanded URLs.
 * ```ct```: A dict in which the keys are the original URLs and the values are the numbers of times each URL was detected in the dataset.
