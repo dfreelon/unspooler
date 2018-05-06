@@ -5,15 +5,14 @@
 
 System requirements
 -------------------
-* Python 3, and that's it.
+* Python 3
+* [requests](http://docs.python-requests.org/en/master/)
 
 Installation
 ------------
 ```python
 pip install unspooler
 ```
-
-Or drop the main file into whatever directory you want--all its dependencies are in the Python standard library.
 
 Quick start
 -----------
