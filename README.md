@@ -20,8 +20,8 @@ Quick start
 from unspooler import *
 shortlinks = ['Here is one shortlink: http://tinyurl.com/2unsh',
 'And here is another: http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
-shorts = unspool_easy(shortlinks)
-print(shorts['urls'])
+unspooled = unspool_easy(shortlinks)
+print(unspooled['urls'])
 ```
 
 Detailed documentation
@@ -34,10 +34,10 @@ Here's how you'd run the above job with ```unspool```:
 from unspooler import *
 shortlinks = ['Here is one shortlink: http://tinyurl.com/2unsh',
 'And here is another: http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
-shorts = {}
+unspooled = {}
 for i in unspool(shortlinks):
-    shorts.update(i)
-print(shorts['urls'])
+    unspooled.update(i)
+print(unspooled['urls'])
 ```
 
 If this job is interrupted, the ```shorts``` variable will contain all unshortened data up to the point of interruption. You can then simply re-run ```unspool``` with ```resume_dict=shorts``` and it will resume at the last unprocessed string. You can even reuse ```shorts``` in the loop (actually you should do this; any new variable you use there will collect only data starting at the last resume point).
