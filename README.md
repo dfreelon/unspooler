@@ -43,7 +43,7 @@ If this job is interrupted, the ```shorts``` variable will contain all unshorten
 
 **Input**
 
-```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any URLs it finds within these strings via regex; non-URL text is discarded. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
+```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any shortlinks it finds within these strings via regex; non-shortlink text is discarded. The default shortlink list (see line 7 of unspooler.py) can be altered via the ```short_domains``` parameter. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
 
 **Output**
 
