@@ -47,7 +47,7 @@ If this job is interrupted, the ```shorts``` variable will contain all unshorten
 
 **Parameters**
 
-```unspool``` and ```unspool_easy``` offer the following modifiable parameters:
+```unspool``` and ```unspool_easy``` offer the following parameters:
 
 * ```txt_data```: A string or iterable of strings containing shortlinks to be extracted automatically.
 * ```short_domains```: List of shortlink domains to unshorten. The default list can be found on line 7 of unspooler.py. 
