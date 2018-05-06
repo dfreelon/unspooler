@@ -43,7 +43,21 @@ If this job is interrupted, the ```shorts``` variable will contain all unshorten
 
 **Input**
 
-```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any shortlinks it finds within these strings via regex; non-shortlink text is discarded. The default shortlink list (see line 7 of unspooler.py) can be altered via the ```short_domains``` parameter. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
+```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any shortlinks it finds within these strings via regex; non-shortlink text is discarded. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
+
+**Parameters**
+
+```unspool``` and ```unspool_easy``` offer the following modifiable parameters:
+
+* ```txt_data```: A string or iterable of strings containing shortlinks, which will be extracted automatically.
+* ```short_domains```: List of shortlink domains to extract from. The default list can be found on line 7 of unspooler.py. 
+* ```resume_dict```: See explanation above.
+* ```save_file```: When nonblank, specifies a text file to save unshortened and shortened links.
+* ```save_dups```: If ```save_file``` is nonblank and ```save_dups``` is ```True```, duplicate URLs will be saved to the output file. 
+* ```keep_query_strings```: A list of domains from which query strings (denoted by question marks) will not be removed. Contains only youtube.com by default.
+* ```verbose```: When set to ```True```, displays program progress information.
+
+To avoid errors, ```resume_dict``` is a parameter of ```unspool_easy``` but it is non-functional.
 
 **Output**
 
