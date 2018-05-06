@@ -18,7 +18,7 @@ Quick start
 -----------
 ```python
 from unspooler import *
-shortlinks = ['http://tinyurl.com/2unsh','http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
+shortlinks = ['Here is one shortlink: http://tinyurl.com/2unsh','And here is another: http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
 shorts = unspool_easy(shortlinks)
 print(shorts['urls'])
 ```
@@ -31,7 +31,7 @@ Here's how you'd run the above job with ```unspool```:
 
 ```python
 from unspooler import *
-shortlinks = ['http://tinyurl.com/2unsh','http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
+shortlinks = ['Here is one shortlink: http://tinyurl.com/2unsh','And here is another: http://bit.ly/1dNVPAW'] #examples from http://www.getlinkinfo.com
 shorts = {}
 for i in unspool(shortlinks):
     shorts.update(i)
