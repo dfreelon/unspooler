@@ -40,11 +40,11 @@ for i in unspool(shortlinks):
 print(unspooled['urls'])
 ```
 
-If this job is interrupted, the ```shorts``` variable will contain all unshortened data up to the point of interruption. You can then simply re-run ```unspool``` with ```resume_dict=shorts``` and it will resume at the last unprocessed string. You can even reuse ```shorts``` in the loop (actually you should do this; any new variable you use there will collect only data starting at the last resume point).
+If this job is interrupted, the ```shorts``` variable will contain all unshortened data up to the point of interruption. You can then simply re-run ```unspool``` with ```resume_dict=unspooled``` and it will resume at the last unprocessed string. You can even reuse ```unspooled``` in the loop (actually you should do this; any new variable you use there will collect only data starting at the last resume point).
 
 **Input**
 
-```unspooler``` accepts two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. ```unspooler``` will attempt to extract and unshorten any shortlinks it finds within these strings via regex; non-shortlink text is discarded. Whenever it comes across a URL it has already unshortened, it pulls the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
+```unspooler```'s primary functions accept two types of input: a single string containing URL data (embedded in a larger string or not), or an iterable containing such strings. They will attempt to extract and unshorten any shortlinks they find within these strings via regex; non-shortlink text is discarded. Whenever they come across a previously-encountered URL, they pull the unshortened link from the output dict instead of querying the unshortening service again. This improves performance over unshortening programs that don't use such a cache.
 
 **Parameters**
 
