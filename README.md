@@ -62,7 +62,7 @@ To avoid errors, ```resume_dict``` is a parameter of ```unspool_easy``` but it i
 
 **Output**
 
-```unspooler```'s output is a dict containing four items:
+```unspooler```'s output is a dict containing five items:
 
 * ```urls```: A dict in which the keys are the shortened URLs and the values are the expanded URLs. Contains all URLs unshortened during the current session.
 * ```curr_urls```: A dict in which the keys are the shortened URLs and the values are the expanded URLs. Contains only URLs in the current string.
