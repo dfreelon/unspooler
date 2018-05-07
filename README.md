@@ -1,7 +1,7 @@
 # unspooler
 **Research-grade URL expansion for Python.**
 
-```unspooler``` is a Python module that expands shortened URLs (e.g. by [bit.ly](https://bit.ly), [goo.gl](https://goo.gl), [tiny.cc](http://tiny.cc), etc.) quickly and efficiently. It extracts each URL in a dataset once and only once, decreasing execution time and bandwidth usage. It can also resume partially complete jobs so you don't have to start from scratch if something interrupts execution.
+```unspooler``` is a Python module that expands shortened URLs (e.g. by [bit.ly](https://bit.ly), [goo.gl](https://goo.gl), [tinyurl.com](http://tinyurl.com), etc.) quickly and efficiently. It extracts each URL in a dataset once and only once, decreasing execution time and bandwidth usage. It can also resume partially complete jobs so you don't have to start from scratch if something interrupts execution.
 
 System requirements
 -------------------
