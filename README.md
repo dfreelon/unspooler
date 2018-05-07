@@ -64,7 +64,8 @@ To avoid errors, ```resume_dict``` is a parameter of ```unspool_easy``` but it i
 
 ```unspooler```'s output is a dict containing four items:
 
-* ```urls```: A dict in which the keys are the original URLs and the values are the expanded URLs.
+* ```urls```: A dict in which the keys are the shortened URLs and the values are the expanded URLs. Contains all URLs unshortened during the current session.
+* ```curr_urls```: A dict in which the keys are the shortened URLs and the values are the expanded URLs. Contains only URLs in the current string.
 * ```ct```: A dict in which the keys are the original URLs and the values are the numbers of times each URL was detected in the dataset.
 * ```skip_urls```: A list of the URLs that generated errors when unspooler attempted to unshorten them.
 * ```index```: The current index number of the iterable entered into unspooler (for resumption purposes).
