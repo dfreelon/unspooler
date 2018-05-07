@@ -1,0 +1,8 @@
+setup.py
+unspooler/__init__.py
+unspooler/unspooler.py
+unspooler.egg-info/PKG-INFO
+unspooler.egg-info/SOURCES.txt
+unspooler.egg-info/dependency_links.txt
+unspooler.egg-info/requires.txt
+unspooler.egg-info/top_level.txt
